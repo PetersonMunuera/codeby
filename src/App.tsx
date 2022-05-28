@@ -1,6 +1,8 @@
 import React from 'react';
-import { GlobalStyle } from './styles/global';
+
 import { Cart } from './components/Cart';
+
+import { GlobalStyle } from './styles/global';
 
 function App() {
   return (
