@@ -4,7 +4,7 @@ import { formatPrice } from "../../util/format";
 
 interface ListItemProps {
   product: ProductProps;
-  handleProductAmount: (productId: string, amount: number) => void
+  handleProductAmount: (productId: string, amount: number) => void;
 }
 
 export function ListItem({ product, handleProductAmount }: ListItemProps) {
@@ -16,9 +16,19 @@ export function ListItem({ product, handleProductAmount }: ListItemProps) {
         <span>{formatPrice(product.price)}</span>
         <strong>{formatPrice(product.sellingPrice * product.amount)}</strong>
         <AmountHandler>
-          <AmountButton allowed={product.amount > 1} onClick={() => handleProductAmount(product.id, product.amount - 1)}>-</AmountButton>
+          <AmountButton
+            allowed={product.amount > 1}
+            onClick={() => handleProductAmount(product.id, product.amount - 1)}
+          >
+            -
+          </AmountButton>
           <strong>{product.amount}</strong>
-          <AmountButton allowed={true} onClick={() => handleProductAmount(product.id, product.amount + 1)}>+</AmountButton>
+          <AmountButton
+            allowed={true}
+            onClick={() => handleProductAmount(product.id, product.amount + 1)}
+          >
+            +
+          </AmountButton>
         </AmountHandler>
       </ItemInfo>
     </Container>
