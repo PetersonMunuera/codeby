@@ -4,9 +4,5 @@ export interface ProductProps {
   name: string
   price: number
   sellingPrice: number
+  amount: number
 };
-
-export interface ProductFormatted extends ProductProps {
-  priceFormatted: string;
-  sellingPriceFormatted: string;
-}

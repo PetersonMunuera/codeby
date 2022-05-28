@@ -1,8 +1,8 @@
 import { Container, Button } from "./style";
 
 interface SelectCartProps {
-  activeCart: number
-  handleActiveCart: (id: number) => void
+  activeCart: number;
+  handleActiveCart: (id: number) => void;
 }
 
 export function SelectCart({ activeCart, handleActiveCart }: SelectCartProps) {
@@ -16,4 +16,4 @@ export function SelectCart({ activeCart, handleActiveCart }: SelectCartProps) {
       </Button>
     </Container>
   );
-};
+}

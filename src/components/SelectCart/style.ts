@@ -1,9 +1,8 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 
 export const Container = styled.header`
-  position: fixed;
-  top: 20px;
-  right: 20px;
+  padding-bottom: 20px;
 `;
 
 interface ButtonProps {
@@ -15,7 +14,12 @@ export const Button = styled.button<ButtonProps>`
   color: ${props => props.active ? 'var(--shape)' : 'var(--text)' } ;
   font-weight: 600;
   padding: 10px 20px;
-  margin-left: 10px;
+  margin-right: 10px;
   border: none;
   border-radius: 10px;
-`
+  transition: linear .1s background-color;
+
+  &:hover {
+    background: ${props => props.active ? darken(0.06, '#3b74f2') : darken(0.06, '#fff')};
+  }
+`;

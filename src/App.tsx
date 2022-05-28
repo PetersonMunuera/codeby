@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import { Cart } from './components/Cart';
+import { Cart } from "./components/Cart";
 
-import { GlobalStyle } from './styles/global';
+import { GlobalStyle } from "./styles/global";
 
 function App() {
   return (

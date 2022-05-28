@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 
 export const Container = styled.div`
   background-color: var(--shape);
@@ -26,6 +27,12 @@ export const Container = styled.div`
       font-weight: 600;
       font-size: 18px;
       color: var(--shape);
+
+      transition: linear .1s background-color;
+
+      &:hover {
+        background-color: ${darken(0.06, '#3b74f2')};
+      }
     }
   }
 `;
