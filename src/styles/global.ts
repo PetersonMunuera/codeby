@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     --shape: #fff;
     --text: #000;
     --grey: #d1d1d1;
+    --grey-dark: #a5a5a5;
     --blue: #3b74f2;
     --green: #257a00;
     --green-light: #c7ffa6;
@@ -31,7 +32,13 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 600;
   }
 
-  button: {
+  button {
     cursor: pointer;
+  }
+
+  #root {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 40px 20px;
   }
 `;
